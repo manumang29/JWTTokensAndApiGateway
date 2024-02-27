@@ -11,8 +11,8 @@
     <groupId>com.attendance</groupId>
     <artifactId>EmployeeAttendaceSystem</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>EmployeeAttendaceSystem</name>
-    <description>EmployeeAttendaceSystem</description>
+    <name>EmployeeAttendanceSystem</name>
+    <description>EmployeeAttendanceSystem</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -25,6 +25,19 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
