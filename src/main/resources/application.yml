@@ -6,7 +6,7 @@ spring:
   profiles:
     active: "dev"
   datasource:
-    url: jdbc:mysql://localhost:3306/employeedb
+    url: jdbc:mysql://localhost:3306/emsdb
     username: root
     password: chuman
   jpa:
