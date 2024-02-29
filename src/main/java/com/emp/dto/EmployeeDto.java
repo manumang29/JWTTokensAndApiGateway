@@ -1,4 +1,4 @@
-package com.attendance.emp.dto;
+package com.emp.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
