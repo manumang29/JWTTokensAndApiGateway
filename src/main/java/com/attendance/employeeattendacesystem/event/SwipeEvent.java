@@ -1,32 +1,32 @@
-package com.attendance.employeeattendacesystem.event;
-
-import com.attendance.employeeattendacesystem.emp.SwipeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.time.LocalDateTime;
-@Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class SwipeEvent {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long employeeId;
-    private SwipeType swipeType;
-    private LocalDateTime localDateTime;
-
-    public void setTimestamp(LocalDateTime now) {
-        this.localDateTime = now;
-    }
-
-    public void setSwipeType(SwipeType swipeType) {
-        this.swipeType = swipeType;
-    }
-}
+//package com.attendance.employeeattendacesystem.event;
+//
+//import com.attendance.employeeattendacesystem.emp.SwipeType;
+//import jakarta.persistence.Entity;
+//import jakarta.persistence.GeneratedValue;
+//import jakarta.persistence.GenerationType;
+//import jakarta.persistence.Id;
+//import lombok.AllArgsConstructor;
+//import lombok.Data;
+//import lombok.NoArgsConstructor;
+//
+//import java.time.LocalDateTime;
+//@Entity
+//@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
+//public class SwipeEvent {
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
+//    private Long employeeId;
+//    private SwipeType swipeType;
+//    private LocalDateTime localDateTime;
+//
+//    public void setTimestamp(LocalDateTime now) {
+//        this.localDateTime = now;
+//    }
+//
+//    public void setSwipeType(SwipeType swipeType) {
+//        this.swipeType = swipeType;
+//    }
+//}

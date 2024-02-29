@@ -1,4 +1,4 @@
-package com.attendance.employeeattendacesystem;
+package com.attendance.emp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

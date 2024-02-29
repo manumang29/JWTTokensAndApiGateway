@@ -1,6 +1,6 @@
-package com.attendance.employeeattendacesystem.service;
+package com.attendance.emp.service;
 
-import com.attendance.employeeattendacesystem.emp.dto.EmployeeDto;
+import com.attendance.emp.dto.EmployeeDto;
 
 import java.util.List;
 

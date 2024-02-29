@@ -1,17 +1,15 @@
-package com.attendance.employeeattendacesystem.service.impl;
+package com.attendance.emp.service.impl;
 
-import com.attendance.employeeattendacesystem.emp.Entity.Employee;
-import com.attendance.employeeattendacesystem.emp.dto.EmployeeDto;
-import com.attendance.employeeattendacesystem.emp.mapper.EmployeeMapper;
-import com.attendance.employeeattendacesystem.exception.ResourceNotFoundException;
-import com.attendance.employeeattendacesystem.repository.EmployeeRepository;
-import com.attendance.employeeattendacesystem.service.EmployeeService;
+import com.attendance.emp.Entity.Employee;
+import com.attendance.emp.dto.EmployeeDto;
+import com.attendance.emp.mapper.EmployeeMapper;
+import com.attendance.emp.exception.ResourceNotFoundException;
+import com.attendance.emp.repository.EmployeeRepository;
+import com.attendance.emp.service.EmployeeService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service

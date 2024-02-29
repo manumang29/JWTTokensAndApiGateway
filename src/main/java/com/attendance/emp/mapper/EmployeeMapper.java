@@ -1,7 +1,7 @@
-package com.attendance.employeeattendacesystem.emp.mapper;
+package com.attendance.emp.mapper;
 
-import com.attendance.employeeattendacesystem.emp.Entity.Employee;
-import com.attendance.employeeattendacesystem.emp.dto.EmployeeDto;
+import com.attendance.emp.Entity.Employee;
+import com.attendance.emp.dto.EmployeeDto;
 
 public class EmployeeMapper {
     public static EmployeeDto mapToEmployeeDto(Employee employee){

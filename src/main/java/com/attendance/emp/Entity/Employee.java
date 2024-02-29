@@ -1,4 +1,4 @@
-package com.attendance.employeeattendacesystem.emp.Entity;
+package com.attendance.emp.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -13,6 +13,7 @@ import lombok.*;
 public class Employee {
      @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY)
+     @Column(name ="emp_id")
      private Long id;
      @Column(name ="first_name")
      private String firstName;
