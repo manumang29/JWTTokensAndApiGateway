@@ -1,6 +1,6 @@
 package com.emp.mapper;
 
-import com.emp.Entity.Employee;
+import com.emp.entity.Employee;
 import com.emp.dto.EmployeeDto;
 
 public class EmployeeMapper {

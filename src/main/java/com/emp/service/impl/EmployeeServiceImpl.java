@@ -1,6 +1,6 @@
 package com.emp.service.impl;
 
-import com.emp.Entity.Employee;
+import com.emp.entity.Employee;
 import com.emp.dto.EmployeeDto;
 import com.emp.mapper.EmployeeMapper;
 import com.emp.exception.ResourceNotFoundException;
