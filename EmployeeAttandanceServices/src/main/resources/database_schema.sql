@@ -1,0 +1,2 @@
+create table attendance_logs (log_id int primary key ,employee_id int,check_in_time(DATETIME),check_out_time(DATETIME));
+create table attendance_records(record_id int primary key employee_id int ,date(DATE),attendance_Status(ENUM Absent,Half Day,Present))
