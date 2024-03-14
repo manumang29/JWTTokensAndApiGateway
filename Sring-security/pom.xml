@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.javatechie</groupId>
-    <artifactId>Sring-security</artifactId>
+    <artifactId>Spring-security</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Sring-security</name>
     <description>Sring-security</description>
