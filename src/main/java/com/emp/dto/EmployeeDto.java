@@ -1,4 +1,4 @@
-package com.attendance.emp.dto;
+package com.emp.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,5 +13,5 @@ public class EmployeeDto {
     private Long id;
     private String firstName;
     private String lastName;
-    private String email;
+    private String emailId;
 }

@@ -1,4 +1,4 @@
-package com.attendance.emp.exception;
+package com.emp.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

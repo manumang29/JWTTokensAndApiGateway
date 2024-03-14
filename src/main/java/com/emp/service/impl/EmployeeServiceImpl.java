@@ -1,11 +1,11 @@
-package com.attendance.emp.service.impl;
+package com.emp.service.impl;
 
-import com.attendance.emp.Entity.Employee;
-import com.attendance.emp.dto.EmployeeDto;
-import com.attendance.emp.mapper.EmployeeMapper;
-import com.attendance.emp.exception.ResourceNotFoundException;
-import com.attendance.emp.repository.EmployeeRepository;
-import com.attendance.emp.service.EmployeeService;
+import com.emp.entity.Employee;
+import com.emp.dto.EmployeeDto;
+import com.emp.mapper.EmployeeMapper;
+import com.emp.exception.ResourceNotFoundException;
+import com.emp.repository.EmployeeRepository;
+import com.emp.service.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -43,7 +43,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         );
         employee.setFirstName(updateEmployee.getFirstName());
         employee.setLastName(updateEmployee.getLastName());
-        employee.setEmail(updateEmployee.getEmail());
+        employee.setEmail(updateEmployee.getEmailId());
         Employee updateEmployeeObj = employeeRepository.save(employee);
         return EmployeeMapper.mapToEmployeeDto(updateEmployeeObj);
     }

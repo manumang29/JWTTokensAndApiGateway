@@ -1,7 +1,7 @@
-package com.attendance.emp.mapper;
+package com.emp.mapper;
 
-import com.attendance.emp.Entity.Employee;
-import com.attendance.emp.dto.EmployeeDto;
+import com.emp.entity.Employee;
+import com.emp.dto.EmployeeDto;
 
 public class EmployeeMapper {
     public static EmployeeDto mapToEmployeeDto(Employee employee){
@@ -18,7 +18,7 @@ public class EmployeeMapper {
         employee.setId(employeeDto.getId());
         employee.setFirstName(employeeDto.getFirstName());
         employee.setLastName(employeeDto.getLastName());
-        employee.setEmail(employeeDto.getEmail());
+        employee.setEmail(employeeDto.getEmailId());
         return employee;
     }
 }

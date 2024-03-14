@@ -1,7 +1,7 @@
-package com.attendance.emp.controller;
+package com.emp.controller;
 
-import com.attendance.emp.dto.EmployeeDto;
-import com.attendance.emp.service.impl.EmployeeServiceImpl;
+import com.emp.dto.EmployeeDto;
+import com.emp.service.impl.EmployeeServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

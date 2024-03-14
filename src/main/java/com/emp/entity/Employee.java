@@ -1,4 +1,4 @@
-package com.attendance.emp.Entity;
+package com.emp.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

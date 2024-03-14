@@ -1,4 +1,4 @@
-package com.attendance.emp.exception;
+package com.emp.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

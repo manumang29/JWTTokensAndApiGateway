@@ -9,22 +9,22 @@ services:
       file: common-config.yml
       service: microservice-db-config
 
-  loansdb:
-    container_name: loansdb
+  swipindb:
+    container_name: swipindb
     ports:
       - 3307:3306
     environment:
-      MYSQL_DATABASE: loansdb
+      MYSQL_DATABASE: swipindb
     extends:
       file: common-config.yml
       service: microservice-db-config
 
-  cardsdb:
-    container_name: cardsdb
+  swipout:
+    container_name: swipout
     ports:
       - 3308:3306
     environment:
-      MYSQL_DATABASE: cardsdb
+      MYSQL_DATABASE: swipout
     extends:
       file: common-config.yml
       service: microservice-db-config
@@ -35,7 +35,7 @@ services:
     ports:
       - "9071:9071"
     healthcheck:
-      test: "curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1"
+      test: "curl --fail --silent localhost:9071/actuator/health/readiness | grep UP || exit 1"
       interval: 10s
       timeout: 5s
       retries: 10
@@ -44,9 +44,9 @@ services:
       file: common-config.yml
       service: microservice-base-config
 
-  accounts:
+  employee:
     image: "empsystem/employeeservice:s7"
-    container_name: accounts-ms
+    container_name: employee-ms
     ports:
       - "9090:9090"
     environment:
@@ -59,14 +59,14 @@ services:
       file: common-config.yml
       service: microservice-configserver-config
 
-  loans:
-    image: "eazybytes/loans:s7"
-    container_name: loans-ms
+  swipeinservice:
+    image: "empsystem/swipeinservice:s7"
+    container_name: swipin-ms
     ports:
-      - "8090:8090"
+      - "9095:9095"
     environment:
-      SPRING_APPLICATION_NAME: "loans"
-      SPRING_DATASOURCE_URL: "jdbc:mysql://loansdb:3306/loansdb"
+      SPRING_APPLICATION_NAME: "swipeinservice"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://swipindb:3306/swipindb"
     depends_on:
       loansdb:
         condition: service_healthy
@@ -74,14 +74,14 @@ services:
       file: common-config.yml
       service: microservice-configserver-config
 
-  cards:
-    image: "eazybytes/cards:s7"
-    container_name: cards-ms
+  swipeoutservice:
+    image: "empsystem/swipeoutservice:s7"
+    container_name: swipeoutservice-ms
     ports:
-      - "9000:9000"
+      - "9045:9045"
     environment:
-      SPRING_APPLICATION_NAME: "cards"
-      SPRING_DATASOURCE_URL: "jdbc:mysql://cardsdb:3306/cardsdb"
+      SPRING_APPLICATION_NAME: "swipeoutservice"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://swipout:3306/swipout"
     depends_on:
       cardsdb:
         condition: service_healthy
